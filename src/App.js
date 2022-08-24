@@ -48,7 +48,7 @@ class PersonalInfo extends Component{
   }
 
   render(){
-    const { first, last, title, address, phone, description } = this.state
+    const { first, last, title, address, phone,email, description } = this.state
     return(
       <div>
         <form>
@@ -57,13 +57,13 @@ class PersonalInfo extends Component{
         <input type="text" id="title" placeholder='Title' name="title" onChange={this.handleChange}/>
         <input type="text" id="photo" placeholder='Photo' name="photo" onChange={this.handleChange}/>
         <input type="text" id="address" placeholder='Address' name="address" onChange={this.handleChange}/>
-        <input type="text" id="phone" placeholder='Phone' name="phone" onChange={this.handleChange}/>
-        <input type="text" id="email" placeholder='Email' name="email" onChange={this.handleChange}/>
+        <input type="tel" id="phone" placeholder='Phone' name="phone" onChange={this.handleChange}/>
+        <input type="email" id="email" placeholder='Email' name="email" onChange={this.handleChange}/>
         <input type="text" id="description" placeholder='descrption' name="description" onChange={this.handleChange}/>
         <button id="add">Add</button>
         <button id="delete">Delete</button>
       </form>
-      <Overview first={first} last={last} title={title} address={address} phone={phone} description={description} />
+      <Overview first={first} last={last} title={title} address={address} phone={phone} email={email} description={description} />
       </div>
       
     )
